@@ -1,0 +1,51 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+
+        app:title="Display">
+
+
+        <ListPreference
+            app:defaultValue="light"
+            app:entries="@array/reply_entries"
+            app:entryValues="@array/reply_values"
+            app:key="reply"
+            app:title="Theme"
+            android:summary="Choose your theme"
+            app:useSimpleSummaryProvider="true"
+            />
+
+        <ListPreference
+            app:defaultValue="4"
+            app:entries="@array/band_entries"
+            app:entryValues="@array/band_values"
+            app:key="band"
+            app:title="Numero de Bandas"
+            app:useSimpleSummaryProvider="true"
+
+
+            />
+
+
+    </PreferenceCategory>
+
+    <Preference
+        android:title="About">
+        <intent android:action="android.intent.action.VIEW"
+            android:data="http://codepath.com/" />
+
+    </Preference>
+
+    <PreferenceCategory app:title="@string/sync_header"
+            app:icon="@drawable/ic_dark_mode"
+        >
+
+        <SwitchPreferenceCompat
+            app:key="sync"
+            app:title="@string/sync_title" />
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,100 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+
+    <string-array name="band_values">
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="band_entries">
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+
+    <string-array name="bandName">
+        <item>Select a Color</item>
+        <item>Black</item>
+        <item>Brown</item>
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Purple</item>
+        <item>Gray</item>
+        <item>White</item>
+        <item>golden</item>
+        <item>silver</item>
+    </string-array>
+
+
+    <integer-array name="bandColorNum">
+        <item>@drawable/color_blob</item>
+        <item>@color/black</item>
+        <item>@color/brown</item>
+        <item>@color/red</item>
+        <item>@color/orange</item>
+        <item>@color/yellow</item>
+        <item>@color/green</item>
+        <item>@color/blue</item>
+        <item>@color/purple</item>
+        <item>@color/gray</item>
+        <item>@color/white</item>
+        <item>@color/golden</item>
+        <item>@color/silver</item>
+    </integer-array>
+
+    <string-array name="multiplier">
+        <item>Select a Color</item>
+        <item>x1Ω</item>
+        <item>x10Ω</item>
+        <item>100Ω</item>
+        <item>1kΩ</item>
+        <item>x10Ω</item>
+        <item>x100kΩ</item>
+        <item>x1MΩ</item>
+        <item>x10MΩ</item>
+        <item>x100MΩ</item>
+        <item>x0.1GΩ</item>
+        <item>x0.1Ω</item>
+        <item>x0.01Ω</item>
+    </string-array>
+
+    <string-array name="tolerance">
+        <item>Select a Color</item>
+        <item>(±)1%</item>
+        <item>(±)2%</item>
+        <item>(±)0.5%</item>
+        <item>(±)0.25%</item>
+        <item>(±)0.1%</item>
+        <item>(±)0.05%</item>
+        <item>(±)5%</item>
+        <item>(±)10%</item>
+    </string-array>
+
+    <integer-array name="toleranceColorNum">
+        <item>@drawable/color_blob</item>
+        <item>@color/brown</item>
+        <item>@color/red</item>
+        <item>@color/green</item>
+        <item>@color/blue</item>
+        <item>@color/purple</item>
+        <item>@color/gray</item>
+        <item>@color/golden</item>
+        <item>@color/silver</item>
+    </integer-array>
+
+
+
+
+</resources>
