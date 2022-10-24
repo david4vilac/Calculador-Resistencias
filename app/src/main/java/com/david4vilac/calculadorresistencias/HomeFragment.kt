@@ -3,9 +3,11 @@ package com.david4vilac.calculadorresistencias
 import android.content.Intent
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
@@ -41,15 +43,20 @@ class HomeFragment : Fragment() {
         val bandMultiplier:View = view.findViewById(R.id.firstMultiplier)
         val bandTolerance:View = view.findViewById(R.id.firstTolerance)
 
+        val btnRandom: Button = view.findViewById(R.id.btnTouch)
 
-
+        btnRandom.setOnClickListener{
+            randomBands(spn1, spn2, spn3, spn4, spn5)
+        }
 
         val colorList = ColorList(this)
+
         colorList.loadColorSpinner(spn1, view, colorBand)
         colorList.loadColorSpinner(spn2, view, colorBand2)
         colorList.loadColorSpinner(spn3, view, colorBand3)
         colorList.loadColorMultiplier(spn4, view, bandMultiplier )
         colorList.loadColorTolerance(spn5, view, bandTolerance )
+
 
         loadSettings()
 
@@ -82,6 +89,29 @@ class HomeFragment : Fragment() {
         finish()
         startActivity(intent)*/
 
+    }
+
+    private fun randomBands(
+        spn1: Spinner,
+        spn2: Spinner,
+        spn3: Spinner,
+        spn4: Spinner,
+        spn5: Spinner
+    ) {
+
+        val ran = (1..10).random()
+        val ran2 = (1..10).random()
+        val ran3 = (1..12).random()
+        val ran4 = (1..8).random()
+
+        spn1.setSelection(ran)
+        spn2.setSelection(ran2)
+        spn3.setSelection(ran3)
+        spn4.setSelection(ran4)
+        spn5.setSelection(ran4)
+        val colorObject = spn1.getSelectedItem()
+        val peso = colorObject.
+        Log.d("ITEM", "${colorObject::class.simpleName}")
 
     }
 

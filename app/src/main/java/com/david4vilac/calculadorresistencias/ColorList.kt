@@ -7,6 +7,7 @@ import android.widget.Spinner
 
 class ColorList(context: HomeFragment) {
 
+
     lateinit var selectedColor: ColorObject
 
     fun bandColors(view: View): List<ColorObject>
@@ -65,7 +66,7 @@ class ColorList(context: HomeFragment) {
     }
 
 
-    fun loadColorSpinner(spn: Spinner, view: View ,viewColorBand: View ) {
+    fun loadColorSpinner(spn: Spinner, view: View ,viewColorBand: View ){
         val colorList = bandColors(view)
         spn.apply {
             adapter = ColorSpinnerAdapter(context, colorList)
@@ -87,11 +88,12 @@ class ColorList(context: HomeFragment) {
                         9 -> viewColorBand.setBackgroundColor(resources.getColor(R.color.gray))
                         10 -> viewColorBand.setBackgroundColor(resources.getColor(R.color.white))
                     }
-                    //if (p2 != 0) valor1 = selectedColor.peso
+
                     //writeText()
                 }
                 override fun onNothingSelected(p0: AdapterView<*>?) {
                     TODO("Not yet implemented")
+
                 }
             }
         }
