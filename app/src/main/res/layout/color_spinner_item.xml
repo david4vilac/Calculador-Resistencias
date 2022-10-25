@@ -21,26 +21,28 @@
         tools:ignore="MissingConstraints">
 
     </View>
+
     <TextView
         android:id="@+id/colorName"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="85dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
         android:layout_weight="1"
+        android:fontFamily="@font/poppins"
         android:gravity="center"
         android:text="Purple"
         android:textColor="#FFFFFF"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:fontFamily="@font/poppins"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.538" />
 
     <TextView
         android:id="@+id/textField"
         android:layout_width="93dp"
         android:layout_height="33dp"
-        android:layout_marginEnd="68dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/poppins"
         android:gravity="center|right"
         android:textColor="#FFFFFF"

@@ -20,6 +20,16 @@
         <item>5</item>
     </string-array>
 
+    <string-array name="unit_mean_entries">
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+
+    <string-array name="unit_mean_values">
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+
 
     <string-array name="bandName">
         <item>Select a Color</item>
@@ -70,16 +80,32 @@
         <item>x0.01Ω</item>
     </string-array>
 
+    <string-array name="ColorNameMultiplier">
+        <item>Select a Color</item>
+        <item>Black</item>
+        <item>Brown</item>
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Purple</item>
+        <item>Gray</item>
+        <item>White</item>
+        <item>golden</item>
+        <item>silver</item>
+    </string-array>
+
     <string-array name="tolerance">
         <item>Select a Color</item>
-        <item>(±)1%</item>
-        <item>(±)2%</item>
-        <item>(±)0.5%</item>
-        <item>(±)0.25%</item>
-        <item>(±)0.1%</item>
-        <item>(±)0.05%</item>
-        <item>(±)5%</item>
-        <item>(±)10%</item>
+        <item>brown</item>
+        <item>red</item>
+        <item>green</item>
+        <item>blue</item>
+        <item>purple</item>
+        <item>gray</item>
+        <item>golden</item>
+        <item>silver</item>
     </string-array>
 
     <integer-array name="toleranceColorNum">

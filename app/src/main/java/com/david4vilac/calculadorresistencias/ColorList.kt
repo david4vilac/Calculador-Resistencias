@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Spinner
+import android.widget.TextView
+import com.david4vilac.calculadorresistencias.BandWeight.Companion.prefs
 
 class ColorList(context: HomeFragment) {
 
@@ -30,7 +32,7 @@ class ColorList(context: HomeFragment) {
     }
 
     fun multiplierColors(view: View): List<ColorObject> {
-        val band = view.resources.getStringArray(R.array.multiplier)
+        val band = view.resources.getStringArray(R.array.bandName)
         val bandColor = view.resources.getIntArray(R.array.bandColorNum)
         return listOf(
             ColorObject(band[0], bandColor[0], "FFFFFFFF",""),
@@ -54,10 +56,10 @@ class ColorList(context: HomeFragment) {
         val bandColor = view.resources.getIntArray(R.array.toleranceColorNum)
         return listOf(
             ColorObject(band[0], bandColor[0], "FFFFFFFF",""),
-            ColorObject(band[1], bandColor[1], "FFFFFFFF","x(±) 1%"),
-            ColorObject(band[2], bandColor[2], "FFFFFFFF", "(±) 2%"),
-            ColorObject(band[3], bandColor[3], "FFFFFFFF", "(±) 0.5%"),
-            ColorObject(band[4], bandColor[4], "FFFFFFFF", "(±) 0.25%"),
+            ColorObject(band[1], bandColor[1], "FFFFFFFF","x(±)1%"),
+            ColorObject(band[2], bandColor[2], "FFFFFFFF", "(±)2%"),
+            ColorObject(band[3], bandColor[3], "FFFFFFFF", "(±)0.5%"),
+            ColorObject(band[4], bandColor[4], "FFFFFFFF", "(±)0.25%"),
             ColorObject(band[5], bandColor[5], "FFFFFFFF", "(±)0.1%"  ),
             ColorObject(band[6], bandColor[6], "FFFFFFFF", "(±)0.05%"),
             ColorObject(band[7], bandColor[7], "FFFFFFFF", "(±)5%"),
@@ -66,13 +68,13 @@ class ColorList(context: HomeFragment) {
     }
 
 
-    fun loadColorSpinner(spn: Spinner, view: View ,viewColorBand: View ){
+    fun loadColorSpinner(spn:Spinner, view:View ,viewColorBand:View, key:String, textView:TextView ){
         val colorList = bandColors(view)
         spn.apply {
             adapter = ColorSpinnerAdapter(context, colorList)
             onItemSelectedListener = object :
                 AdapterView.OnItemSelectedListener {
-                @SuppressLint("ResourceAsColor")
+                @SuppressLint("ResourceAsColor", "CommitPrefEdits")
                 override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                     selectedColor = colorList[p2]
                     when (p2) {
@@ -88,8 +90,11 @@ class ColorList(context: HomeFragment) {
                         9 -> viewColorBand.setBackgroundColor(resources.getColor(R.color.gray))
                         10 -> viewColorBand.setBackgroundColor(resources.getColor(R.color.white))
                     }
+                    prefs.saveName(p2.toString(), key)
+                    val mainActivity = MainActivity()
+                    mainActivity.print(textView)
+                    if(p2 == 0) mainActivity.clearText(textView)
 
-                    //writeText()
                 }
                 override fun onNothingSelected(p0: AdapterView<*>?) {
                     TODO("Not yet implemented")
@@ -99,7 +104,7 @@ class ColorList(context: HomeFragment) {
         }
     }
 
-    fun loadColorMultiplier( spnMultiplier: Spinner, view: View, viewColorBand: View) {
+    fun loadColorMultiplier( spnMultiplier:Spinner, view:View, viewColorBand:View, key:String, textView:TextView) {
         val multiplierColors = multiplierColors(view)
         spnMultiplier.apply{
             adapter = ColorSpinnerAdapter(context, multiplierColors)
@@ -124,6 +129,10 @@ class ColorList(context: HomeFragment) {
                         12 -> viewColorBand.setBackgroundColor(resources.getColor(R.color.silver))
                         //colorSpinner.(Color.parseColor("#000000"))
                     }
+                    prefs.saveName(multiplierColors[p2].peso, key)
+                    val mainActivity = MainActivity()
+                    mainActivity.print(textView)
+                    if(p2 == 0) mainActivity.clearText(textView)
                 }
                 override fun onNothingSelected(p0: AdapterView<*>?) {
                     TODO("Not yet implemented")
@@ -132,7 +141,7 @@ class ColorList(context: HomeFragment) {
         }
     }
 
-    fun loadColorTolerance( spnTolerance: Spinner, view: View, viewColorBand: View) {
+    fun loadColorTolerance( spnTolerance:Spinner, view:View, viewColorBand: View, key:String, textView:TextView) {
         val toleranceColors = toleranceColors(view)
         spnTolerance.apply{
             adapter = ColorSpinnerAdapter(context, toleranceColors)
@@ -153,6 +162,10 @@ class ColorList(context: HomeFragment) {
                         8 -> viewColorBand.setBackgroundColor(resources.getColor(R.color.golden))
                         9 -> viewColorBand.setBackgroundColor(resources.getColor(R.color.silver))
                     }
+                    prefs.saveName(toleranceColors[p2].peso, key)
+                    val mainActivity = MainActivity()
+                    mainActivity.print(textView)
+                    if(p2 == 0) mainActivity.clearText(textView)
                 }
                 override fun onNothingSelected(p0: AdapterView<*>?) {
                     TODO("Not yet implemented")
