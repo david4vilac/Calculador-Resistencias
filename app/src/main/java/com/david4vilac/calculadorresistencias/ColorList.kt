@@ -17,7 +17,7 @@ class ColorList(context: HomeFragment) {
         val band = view.resources.getStringArray(R.array.bandName)
         val bandColor = view.resources.getIntArray(R.array.bandColorNum)
         return listOf(
-            ColorObject(band[0], bandColor[0], "FFFFFFFF",""),
+            ColorObject(band[0], bandColor[0], "FF000000",""),
             ColorObject(band[1], bandColor[1], "FFFFFFFF","0"),
             ColorObject(band[2], bandColor[2], "FFFFFFFF", "1"),
             ColorObject(band[3], bandColor[3], "FFFFFFFF", "2"),
@@ -35,7 +35,7 @@ class ColorList(context: HomeFragment) {
         val band = view.resources.getStringArray(R.array.bandName)
         val bandColor = view.resources.getIntArray(R.array.bandColorNum)
         return listOf(
-            ColorObject(band[0], bandColor[0], "FFFFFFFF",""),
+            ColorObject(band[0], bandColor[0], "FF000000",""),
             ColorObject(band[1], bandColor[1], "FFFFFFFF","1"),
             ColorObject(band[2], bandColor[2], "FFFFFFFF", "10"),
             ColorObject(band[3], bandColor[3], "FFFFFFFF", "100"),
@@ -55,7 +55,7 @@ class ColorList(context: HomeFragment) {
         val band = view.resources.getStringArray(R.array.tolerance)
         val bandColor = view.resources.getIntArray(R.array.toleranceColorNum)
         return listOf(
-            ColorObject(band[0], bandColor[0], "FFFFFFFF",""),
+            ColorObject(band[0], bandColor[0], "FF000000",""),
             ColorObject(band[1], bandColor[1], "FFFFFFFF","(±)1%"),
             ColorObject(band[2], bandColor[2], "FFFFFFFF", "(±)2%"),
             ColorObject(band[3], bandColor[3], "FFFFFFFF", "(±)0.5%"),

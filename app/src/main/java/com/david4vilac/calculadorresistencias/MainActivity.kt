@@ -1,18 +1,15 @@
 package com.david4vilac.calculadorresistencias
 
-import android.content.Context
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.preference.PreferenceManager
 import com.david4vilac.calculadorresistencias.BandWeight.Companion.prefs
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    @SuppressLint("SetTextI18n")
     fun print(textView:TextView){
         val cant = prefs.getBand()
         val multiplierText:Float
@@ -35,12 +33,7 @@ class MainActivity : AppCompatActivity() {
         val multiplier = prefs.getMultiplier()
         val tolerance = prefs.getTolerance()
 
-        if (cant == "5") {
-            if (first == "" || second == "" || third == "" || multiplier == "" || tolerance == "") clearText(textView)
-        }
-        if (cant == "4") {
-            if (first == "" || second == "" || multiplier == "" || tolerance == "") clearText(textView)
-        }
+
 
         measure = when (multiplier) {
             "1K" -> "KΩ"
@@ -67,35 +60,24 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
-
-        val prueba = "$first$second$third".toInt() * multiplierText
-        if(prueba <= 0f){
-            textView.text = "${prueba}$measure$tolerance"
-        }else{
-            textView.text = "${prueba.toInt()}$measure$tolerance"
+        if (cant == "5") {
+            if (first == "" || second == "" || third == "" || multiplier == "" || tolerance == "") clearText(textView)
+        }
+        if (cant == "4") {
+            if (first == "" || second == "" || multiplier == "" || tolerance == "") clearText(textView)
         }
 
-        //textView.text = "$first$second$third x $multiplierText $tolerance"
-        Log.d("Prueba", "${prueba::class.simpleName}")
-    }
-
-    fun defaultUnit(multiplier:Float, result:Float):String{
-        val measure:String
-        when(multiplier){
-            1000f -> ""
-            10000f -> ""
-            100000f -> ""
-            1000000f -> ""
-            10000000f -> ""
-            100000000f -> ""
-            1000000000f -> ""
-            1f -> ""
-            else -> ""
+        if (first != "" || second != "" || third != ""){
+            val prueba = "$first$second$third".toInt() * multiplierText
+            if(prueba <= 0f){
+                textView.text = "${prueba}$measure$tolerance"
+            }else{
+                textView.text = "${prueba.toInt()}$measure$tolerance"
+            }
         }
 
-        return ""
     }
+
 
     fun restartApplication(){
         val i = Intent(this, HomeFragment::class.java)
@@ -104,7 +86,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clearText(textView:TextView){
-        textView.text = "Resultados"
+        textView.text = "Results"
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

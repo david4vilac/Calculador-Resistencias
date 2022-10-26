@@ -51,8 +51,13 @@
     </string-array>
 
     <string-array name="unit_mean_values">
-        <item>light</item>
-        <item>dark</item>
+        <item>n</item>
+        <item>µΩ</item>
+        <item>mΩ</item>
+        <item>Ω</item>
+        <item>KΩ</item>
+        <item>MΩ</item>
+        <item>GΩ</item>
     </string-array>
 
 

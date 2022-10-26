@@ -47,7 +47,7 @@
             app:defaultValue="4"
             app:entries="@array/unit_mean_entries"
             app:entryValues="@array/unit_mean_values"
-            app:key="band"
+            app:key="unit_mean_band"
             app:title="@string/Measure"
             />
 

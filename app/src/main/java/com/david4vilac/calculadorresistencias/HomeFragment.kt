@@ -20,6 +20,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.util.*
 
 
+@Suppress("DEPRECATION")
 class HomeFragment : Fragment() {
 
     var fiveBands:Boolean? = null
