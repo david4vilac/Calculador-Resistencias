@@ -49,7 +49,12 @@ class ColorSpinnerAdapter(context: Context, list : List<ColorObject>)
 
         colorBlob?.background?.setTint(colorObject.hexHash)
 
-        if (colorObject.name == "White" || colorObject.name == "x0.1GΩ"){
+        if (colorObject.name == "Select a Color"){
+            colorHexItem?.setTextColor(view.resources.getColor(R.color.green))
+        }
+
+
+        if (colorObject.name == "White" || colorObject.name == "x0.1GΩ" || colorObject.name == "Blanco") {
             colorHexItem?.setTextColor(Color.parseColor("#000000"))
             colorNameItem?.setTextColor(Color.parseColor("#000000"))
         }

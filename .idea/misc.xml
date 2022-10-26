@@ -6,6 +6,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/CalculadorResistencias/app/src/main/res/drawable-v24/color_blob.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CalculadorResistencias/app/src/main/res/drawable-v24/ic_arrow_drop_down.xml" value="0.1935" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CalculadorResistencias/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1895" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CalculadorResistencias/app/src/main/res/drawable/ic_dark_mode.xml" value="0.341" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CalculadorResistencias/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1895" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CalculadorResistencias/app/src/main/res/drawable/ic_settings.xml" value="0.135" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CalculadorResistencias/app/src/main/res/layout/about_me_custom_dialog.xml" value="0.13496376811594202" />
@@ -13,7 +14,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/CalculadorResistencias/app/src/main/res/layout/activity_splash.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CalculadorResistencias/app/src/main/res/layout/color_spinner_bg.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CalculadorResistencias/app/src/main/res/layout/color_spinner_item.xml" value="0.67" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/CalculadorResistencias/app/src/main/res/layout/fragment_home.xml" value="0.29110512129380056" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CalculadorResistencias/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CalculadorResistencias/app/src/main/res/menu/main_nav.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CalculadorResistencias/app/src/main/res/menu/menu_main.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CalculadorResistencias/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.135" />

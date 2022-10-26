@@ -15,6 +15,9 @@ class SettingsFragment : PreferenceFragmentCompat() {
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
+        val homeFragment = HomeFragment()
+        homeFragment.loadSettings()
+
         super.onConfigurationChanged(newConfig)
     }
 

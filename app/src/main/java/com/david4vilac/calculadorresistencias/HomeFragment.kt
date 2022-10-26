@@ -1,23 +1,23 @@
 package com.david4vilac.calculadorresistencias
 
-import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Spinner
+import android.widget.Spinner.MODE_DIALOG
+import android.widget.Spinner.MODE_DROPDOWN
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.preference.PreferenceManager
 import com.david4vilac.calculadorresistencias.BandWeight.Companion.prefs
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import java.lang.Double
+import java.util.*
 
 
 class HomeFragment : Fragment() {
@@ -45,11 +45,6 @@ class HomeFragment : Fragment() {
         val spn4:Spinner = view.findViewById(R.id.colorSpinner4)
         val spn5:Spinner = view.findViewById(R.id.colorSpinner5)
 
-
-
-
-
-
         val colorList = ColorList(this)
 
         val colorBand:View = view.findViewById(R.id.firstBand)
@@ -61,13 +56,12 @@ class HomeFragment : Fragment() {
 
         val textView:TextView = view.findViewById(R.id.textView)
 
+
         colorList.loadColorSpinner(spn1, view, colorBand,"primera",textView)
         colorList.loadColorSpinner(spn2, view, colorBand2,"segunda",textView)
 
         colorList.loadColorMultiplier(spn4, view, bandMultiplier,"multiplicador",textView)
         colorList.loadColorTolerance(spn5, view, bandTolerance,"tolerance",textView)
-
-
 
         if(fiveBands == true) {
             val spn3:Spinner = view.findViewById(R.id.colorSpinner3)
@@ -80,22 +74,16 @@ class HomeFragment : Fragment() {
             btnRandomFourBands(spn1,spn2,spn4,spn5)
         }
 
-
-
-
-
-
         fab_settings.setOnClickListener{
             findNavController().navigate(R.id.action_homeFragment_to_settingsFragment)
         }
-
-
     }
 
     fun btnRandomFourBands(spn1:Spinner,spn2:Spinner,spn4:Spinner, spn5:Spinner){
         val btnRandom:Button? = view?.findViewById(R.id.btnTouch)
         btnRandom?.setOnClickListener{
             randomBands4(spn1,spn2,spn4, spn5)
+            setLocale("Default Value")
         }
     }
 
@@ -111,18 +99,39 @@ class HomeFragment : Fragment() {
 
         val theme = sp.getString("reply", "")
         val band = sp.getString("band", "")
+        val language = sp.getString("language", "")
+        val spinnerMode = sp.getString("spinner_mode", "")
 
         val listener = OnSharedPreferenceChangeListener { _, _ ->
             restartApplication()
         }
         sp.registerOnSharedPreferenceChangeListener(listener)
 
+
+        setLocale(language!!)
         changeTheme(theme!!, band!!)
         hideBand(band)
+        spinnerMode(spinnerMode!!)
     }
 
     private fun restartApplication() {
-        Toast.makeText(context, "CAMBIADO", Toast.LENGTH_SHORT).show()
+        val intent = Intent()
+        intent.setClass(requireActivity(), SplashActivity::class.java)
+        startActivity(intent)
+        requireActivity().finish()
+
+    }
+
+    private fun setLocale(localeName: String) {
+        val currentLanguage = requireActivity().intent.getStringExtra("es").toString()
+        if (localeName != currentLanguage) {
+            var locale = Locale(localeName)
+            val res = resources
+            val dm = res.displayMetrics
+            val conf = res.configuration
+            conf.locale = locale
+            res.updateConfiguration(conf, dm)
+        }
     }
 
     private fun randomBands(spn1:Spinner, spn2:Spinner, spn3:Spinner, spn4:Spinner, spn5:Spinner) {
@@ -157,10 +166,6 @@ class HomeFragment : Fragment() {
         return colorObject.peso
     }
 
-    private fun finish() {
-        throw RuntimeException("Stub!")
-    }
-
     fun changeTheme(theme:String, band: String) {
         hideBand(band)
         if(theme == "light"){
@@ -188,6 +193,22 @@ class HomeFragment : Fragment() {
             fiveBands = false
         }
    }
+
+    fun spinnerMode(spinnerMode: String){
+        var spn3:Spinner = requireView().findViewById(R.id.colorSpinner3)
+
+/*        val spn2:Spinner = view.findViewById(R.id.colorSpinner2)
+        val spn4:Spinner = view.findViewById(R.id.colorSpinner4)
+        val spn5:Spinner = view.findViewById(R.id.colorSpinner5)*/
+
+        if(spinnerMode == "dropdown"){
+            spn3 = Spinner(context, MODE_DROPDOWN)
+        }
+        if(spinnerMode == "dialog"){
+            spn3 = Spinner(context, MODE_DIALOG)
+        }
+    }
+
 
     fun data(key:String,textView:TextView ){
         textView.text = "$key"

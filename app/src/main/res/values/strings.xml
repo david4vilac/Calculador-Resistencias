@@ -1,21 +1,33 @@
 <resources>
     <string name="app_name">Calculador Resistencias</string>
-    <string name="nick">\@david4vilac</string>
+    <string name="nick" translatable="false">\@david4vilac</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
+    <string name="messages_header" translatable="false">Messages</string>
+    <string name="sync_header" translatable="false">Sync</string>
 
     <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
+    <string name="signature_title" translatable="false">Your signature</string>
     <string name="reply_title">Default reply action</string>
 
     <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="sync_title" translatable="false">Sync email periodically</string>
+    <string name="attachment_title" translatable="false">Download incoming attachments</string>
+    <string name="attachment_summary_off" translatable="false">Only download attachments when manually requested</string>
+    <string name="_3_banda_de_color">3.ª banda de color</string>
+    <string name="multiplicador">Multiplicador</string>
+    <string name="tolerancia">Tolerancia</string>
+    <string name="voy_a_tener_suerte">voy a tener suerte</string>
+    <string name="_2_banda_de_color">2.ª banda de color</string>
+    <string name="language_res">Idioma</string>
+    <string name="theme">Tema</string>
+    <string name="number_band">Numero de Bandas</string>
+    <string name="Measure">Unidad de Medida</string>
+    <string name="spinner_mode">Modo del Spinner</string>
+    <string name="Settings">Configuraciones</string>
+    <string name="dise_ado_y_programado_por">Diseñado y Programado por:</string>
+    <string name="_1_banda_de_color">1.ª banda de color</string>
+    <string name="future_version">En una versión Futura</string>
 </resources>

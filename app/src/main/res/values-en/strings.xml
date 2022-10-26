@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Resistor Calculator</string>
+    <string name="reply_title">"This is a "</string>
+    <string name="_3_banda_de_color">Third Band</string>
+    <string name="multiplicador">Multiplicador</string>
+    <string name="tolerancia">Tolerance</string>
+    <string name="voy_a_tener_suerte">" I'm gonna get lucky"</string>
+    <string name="_2_banda_de_color">Second Band</string>
+    <string name="language_res">Language</string>
+    <string name="dark">Dark</string>
+    <string name="brown">Brown</string>
+    <string name="red">Red</string>
+    <string name="orange">Orange</string>
+    <string name="yellow">Yellow</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="gray">Gray</string>
+    <string name="purple">Purple</string>
+    <string name="white">White</string>
+    <string name="golden">Golden</string>
+    <string name="silver">Silver</string>
+    <string name="theme">Theme</string>
+    <string name="Measure">Measure</string>
+    <string name="spinner_mode">Spinner Mode</string>
+    <string name="Settings">Settings</string>
+    <string name="number_band">Number Bands</string>
+    <string name="dise_ado_y_programado_por">Desing and Programming by:</string>
+    <string name="_1_banda_de_color">First Band</string>
+
+</resources>

@@ -56,7 +56,7 @@ class ColorList(context: HomeFragment) {
         val bandColor = view.resources.getIntArray(R.array.toleranceColorNum)
         return listOf(
             ColorObject(band[0], bandColor[0], "FFFFFFFF",""),
-            ColorObject(band[1], bandColor[1], "FFFFFFFF","x(±)1%"),
+            ColorObject(band[1], bandColor[1], "FFFFFFFF","(±)1%"),
             ColorObject(band[2], bandColor[2], "FFFFFFFF", "(±)2%"),
             ColorObject(band[3], bandColor[3], "FFFFFFFF", "(±)0.5%"),
             ColorObject(band[4], bandColor[4], "FFFFFFFF", "(±)0.25%"),
@@ -90,7 +90,7 @@ class ColorList(context: HomeFragment) {
                         9 -> viewColorBand.setBackgroundColor(resources.getColor(R.color.gray))
                         10 -> viewColorBand.setBackgroundColor(resources.getColor(R.color.white))
                     }
-                    prefs.saveName(p2.toString(), key)
+                    prefs.saveName(colorList[p2].peso, key)
                     val mainActivity = MainActivity()
                     mainActivity.print(textView)
                     if(p2 == 0) mainActivity.clearText(textView)
