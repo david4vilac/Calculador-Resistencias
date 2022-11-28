@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculador Resistencias</string>
+    <string name="dark">Negro</string>
+    <string name="brown">Marrón</string>
+    <string name="red">Rojo</string>
+    <string name="orange">Naranja</string>
+    <string name="yellow">Amarillo</string>
+    <string name="green">Verde</string>
+    <string name="blue">Azul</string>
+    <string name="purple">Violeta</string>
+    <string name="gray">Gris</string>
+    <string name="white">Blanco</string>
+    <string name="golden">Oro</string>
+    <string name="silver">Plata</string>
+    <string name="reply_title">Esto es</string>
+    <string name="_3_banda_de_color">3.ª banda de color</string>
+    <string name="tolerancia">Tolerancia</string>
+    <string name="multiplicador">Multiplicador</string>
+    <string name="voy_a_tener_suerte">voy a tener suerte</string>
+    <string name="_2_banda_de_color">2.ª banda de color</string>
+    <string name="language_res">Idioma</string>
+    <string name="theme">Tema</string>
+    <string name="number_band">Numero de Bandas</string>
+    <string name="Measure">Unidad de Medida</string>
+    <string name="spinner_mode">Modo del Spinner</string>
+    <string name="dise_ado_y_programado_por">Diseñado y Programado por:</string>
+    <string name="Settings">Configuraciones</string>
+    <string name="_1_banda_de_color">1.ª banda de color</string>
+    <string name="future_version">En una versión Futura</string>
+    <string name="en_text">Ingles</string>
+    <string name="es_text">Español</string>
+    <string name="unidad_de_medida">Unidad de Medida</string>
+    <string name="cambiar_idioma">Cambiar idioma</string>
+    <string name="valor_de_la_resistencia">Valor de la resistencia</string>
+</resources>

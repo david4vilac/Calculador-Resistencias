@@ -1,5 +1,5 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <PreferenceCategory
 
@@ -7,65 +7,41 @@
 
 
         <ListPreference
-            app:title="@string/number_band"
             app:defaultValue="4"
             app:entries="@array/band_entries"
             app:entryValues="@array/band_values"
             app:key="band"
-            app:useSimpleSummaryProvider="true"
-            />
-
+            app:title="@string/number_band"
+            app:useSimpleSummaryProvider="true" />
 
         <ListPreference
-            app:defaultValue="Default Value"
-            app:entries="@array/language_entries"
-            app:entryValues="@array/language_values"
-            app:key="language"
-            app:title="@string/language_res"
             android:summary="Choose your theme"
-            app:useSimpleSummaryProvider="true"
-            />
-
-
-        <ListPreference
             app:defaultValue="light"
             app:entries="@array/reply_entries"
             app:entryValues="@array/reply_values"
             app:key="reply"
             app:title="@string/theme"
-            android:summary="Choose your theme"
-            app:useSimpleSummaryProvider="true"
-            />
+            app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        app:title="@string/future_version"
-        >
+    <PreferenceCategory app:title="@string/future_version">
+
 
         <ListPreference
-            app:defaultValue="4"
-            app:entries="@array/unit_mean_entries"
-            app:entryValues="@array/unit_mean_values"
-            app:key="unit_mean_band"
-            app:title="@string/Measure"
-            />
-
-        <ListPreference
+            android:summary="Choose your theme"
             app:defaultValue="dialog"
             app:entries="@array/spinner_mode_entries"
             app:entryValues="@array/spinner_mode_values"
             app:key="spinner_mode"
             app:title="@string/spinner_mode"
-            android:summary="Choose your theme"
-            app:useSimpleSummaryProvider="true"
-            />
+            app:useSimpleSummaryProvider="true" />
 
 
     </PreferenceCategory>
-    <Preference
-        android:title="About">
-        <intent android:action="android.intent.action.VIEW"
+    <Preference android:title="About">
+        <intent
+            android:action="android.intent.action.VIEW"
             android:data="https://github.com/david4vilac" />
 
     </Preference>

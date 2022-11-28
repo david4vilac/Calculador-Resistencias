@@ -6,13 +6,13 @@
     </string-array>
 
     <string-array name="language_entries">
-        <item>Español</item>
         <item>English</item>
+        <item>Español</item>
     </string-array>
 
     <string-array name="language_values">
-        <item>Default Value</item>
         <item>en</item>
+        <item>es</item>
     </string-array>
 
     <string-array name="reply_values">
@@ -26,9 +26,9 @@
     </string-array>
 
     <string-array name="spinner_mode_values">
-    <item>dialog</item>
-    <item>dropdown</item>
-</string-array>
+        <item>dialog</item>
+        <item>dropdown</item>
+    </string-array>
 
     <string-array name="band_values">
         <item>4</item>
@@ -41,7 +41,7 @@
     </string-array>
 
     <string-array name="unit_mean_entries">
-        <item>n</item>
+        <item>nΩ</item>
         <item>µΩ</item>
         <item>mΩ</item>
         <item>Ω</item>
@@ -128,17 +128,16 @@
     </string-array>
 
 
-
     <string-array name="tolerance">
         <item>Select a Color</item>
-        <item>brown</item>
-        <item>red</item>
-        <item>green</item>
-        <item>blue</item>
-        <item>purple</item>
-        <item>gray</item>
-        <item>golden</item>
-        <item>silver</item>
+        <item>@string/brown</item>
+        <item>@string/red</item>
+        <item>@string/green</item>
+        <item>@string/blue</item>
+        <item>@string/purple</item>
+        <item>@string/gray</item>
+        <item>@string/golden</item>
+        <item>@string/silver</item>
     </string-array>
 
     <integer-array name="toleranceColorNum">
@@ -162,7 +161,7 @@
     <string name="green">Verde</string>
     <string name="blue">Azul</string>
     <string name="purple">Violeta</string>
-    <string name="gray">Gray</string>
+    <string name="gray">Gris</string>
     <string name="white">Blanco</string>
     <string name="golden">Oro</string>
     <string name="silver">Plata</string>

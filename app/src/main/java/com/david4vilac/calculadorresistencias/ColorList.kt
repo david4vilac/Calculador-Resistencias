@@ -3,11 +3,13 @@ package com.david4vilac.calculadorresistencias
 import android.annotation.SuppressLint
 import android.view.View
 import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.TextView
 import com.david4vilac.calculadorresistencias.BandWeight.Companion.prefs
 
-class ColorList(context: HomeFragment) {
+@Suppress("DEPRECATION")
+class ColorList() {
 
 
     lateinit var selectedColor: ColorObject
@@ -140,6 +142,7 @@ class ColorList(context: HomeFragment) {
             }
         }
     }
+
 
     fun loadColorTolerance( spnTolerance:Spinner, view:View, viewColorBand: View, key:String, textView:TextView) {
         val toleranceColors = toleranceColors(view)

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.david4vilac.calculadorresistencias">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:name=".BandWeight"
@@ -25,7 +24,10 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:supportsPictureInPicture="true"
+            android:resizeableActivity="true"
+            android:windowSoftInputMode="adjustNothing"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"/>
 
     </application>
 

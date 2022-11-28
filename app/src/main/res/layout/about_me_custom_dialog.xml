@@ -11,6 +11,7 @@
     >
 
     <TextView
+        android:id="@+id/tbPrueba"
         android:layout_margin="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

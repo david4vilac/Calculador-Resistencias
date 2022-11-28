@@ -27,5 +27,11 @@
     <string name="number_band">Number Bands</string>
     <string name="dise_ado_y_programado_por">Desing and Programming by:</string>
     <string name="_1_banda_de_color">First Band</string>
+    <string name="future_version">in a future version</string>
+    <string name="en_text">English</string>
+    <string name="es_text">Spanish</string>
+    <string name="unidad_de_medida">Unit of Measure</string>
+    <string name="cambiar_idioma">Change language</string>
+    <string name="valor_de_la_resistencia">Resistance value</string>
 
 </resources>

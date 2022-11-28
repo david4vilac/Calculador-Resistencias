@@ -3,15 +3,13 @@ package com.david4vilac.calculadorresistencias
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.Spinner
 import android.widget.TextView
 
-class ColorSpinnerAdapter(context: Context, list : List<ColorObject>)
+class ColorSpinnerAdapter(context: Context, list: List<ColorObject>)
     : ArrayAdapter<ColorObject>(context, 0 , list)
 {
     private var layoutInflater = LayoutInflater.from(context)

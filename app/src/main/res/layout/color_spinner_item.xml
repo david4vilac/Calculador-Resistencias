@@ -32,6 +32,7 @@
         android:fontFamily="@font/poppins"
         android:gravity="start"
         android:text="Purple"
+        android:textColor="@color/text_color"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

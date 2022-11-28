@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,204 +8,286 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment"
     >
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-
-    >
-    <RelativeLayout
-        android:id="@+id/containerResistance"
-        android:layout_width="174dp"
-        android:layout_height="156dp"
-        android:background="@mipmap/resitor"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
 
-        <View
-            android:id="@+id/firstBand"
-            android:layout_width="12dp"
-            android:layout_height="43dp"
-            android:layout_marginBottom="43dp"
-            android:background="@color/white" />
-
-        <View
-            android:id="@+id/firstBand2"
-            android:layout_width="12dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="9dp"
-            android:layout_toEndOf="@+id/firstBand"
-            android:background="@color/white" />
-
-        <View
-            android:id="@+id/firstBand3"
-            android:layout_width="12dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="8dp"
-            android:layout_toEndOf="@+id/firstBand2"
-            android:background="@color/white" />
-
-        <View
-            android:id="@+id/firstMultiplier"
-            android:layout_width="12dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="8dp"
-            android:layout_toEndOf="@+id/firstBand3"
-            android:background="@color/white" />
-
-        <View
-            android:id="@+id/firstTolerance"
-            android:layout_width="12dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="8dp"
-            android:layout_toEndOf="@+id/firstMultiplier"
-            android:background="@color/white" />
-
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="240dp"
-        android:layout_height="43dp"
-        android:gravity="center"
-        android:hint="Resultados"
-        android:textSize="24sp"
-        android:layout_margin="20dp"
-        />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:id="@+id/scContainer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <RelativeLayout
-            android:layout_width="365dp"
-            android:layout_height="22dp"
-            android:layout_marginBottom="25dp">
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins"
-                android:text="@string/_1_banda_de_color"
-                />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/fab_settings"
+        android:padding="8dp">
 
 
-            <Spinner
-                android:id="@+id/colorSpinner"
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:background="@drawable/color_blob" />
-        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
 
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="22dp"
-            android:layout_marginBottom="25dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins"
-                android:text="@string/_2_banda_de_color" />
-
-            <Spinner
-                android:id="@+id/colorSpinner2"
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:background="@drawable/color_blob" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/containerBand3"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp">
-
-
-            <TextView
-                android:id="@+id/tvBand3"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins"
-                android:text="@string/_3_banda_de_color"
-                />
-
-            <Spinner
-                android:id="@+id/colorSpinner3"
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:background="@drawable/color_blob" />
-        </RelativeLayout>
-
-         <RelativeLayout
-            android:layout_width="fill_parent"
-             android:layout_height="22dp"
-             android:layout_marginBottom="25dp">
-
-             <TextView
-                 android:layout_width="140dp"
-                 android:layout_height="wrap_content"
-                 android:fontFamily="@font/poppins"
-                 android:text="@string/multiplicador" />
-
-            <Spinner
-                android:id="@+id/colorSpinner4"
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/color_blob"
+            >
+            <RelativeLayout
+                android:id="@+id/containerResistance"
+                android:layout_width="174dp"
+                android:layout_height="156dp"
+                android:background="@mipmap/resitor"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:spinnerMode="dialog"
-                android:layout_alignParentEnd="true"
-                />
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        </RelativeLayout>
 
+                <View
+                    android:id="@+id/firstBand"
+                    android:layout_width="12dp"
+                    android:layout_height="43dp"
+                    android:layout_marginBottom="43dp"
+                    android:background="@color/white" />
 
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="22dp"
-            android:layout_marginBottom="25dp">
+                <View
+                    android:id="@+id/firstBand2"
+                    android:layout_width="12dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_toEndOf="@+id/firstBand"
+                    android:background="@color/white" />
+
+                <View
+                    android:id="@+id/firstBand3"
+                    android:layout_width="12dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/firstBand2"
+                    android:background="@color/white" />
+
+                <View
+                    android:id="@+id/firstMultiplier"
+                    android:layout_width="12dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/firstBand3"
+                    android:background="@color/white" />
+
+                <View
+                    android:id="@+id/firstTolerance"
+                    android:layout_width="12dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/firstMultiplier"
+                    android:background="@color/white" />
+
+            </RelativeLayout>
 
             <TextView
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:fontFamily="@font/poppins"
-                android:text="@string/tolerancia" />
+                android:gravity="center"
+                android:hint="@string/valor_de_la_resistencia"
+                android:textSize="24sp"
+                android:layout_margin="20dp"
 
-            <Spinner
-                android:id="@+id/colorSpinner5"
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:background="@drawable/color_blob" />
-
-        </RelativeLayout>
-
-        <Button
-            android:id="@+id/btnTouch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/voy_a_tener_suerte"
-            android:textColor="@color/white"
-            />
+                />
 
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
 
+                <RelativeLayout
+                    android:layout_width="365dp"
+                    android:layout_height="22dp"
+                    android:layout_marginBottom="25dp">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/_1_banda_de_color"
+                        />
+
+
+                    <Spinner
+                        android:id="@+id/colorSpinner"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/color_blob" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="22dp"
+                    android:layout_marginBottom="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/_2_banda_de_color" />
+
+                    <Spinner
+                        android:id="@+id/colorSpinner2"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/color_blob" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/containerBand3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="22dp"
+                    android:layout_marginBottom="25dp">
+                    <TextView
+                        android:id="@+id/tvBand3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/_3_banda_de_color"
+                        />
+
+                    <Spinner
+                        android:id="@+id/colorSpinner3"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/color_blob" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="22dp"
+                    android:layout_marginBottom="25dp">
+
+                    <TextView
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/multiplicador" />
+
+                    <Spinner
+                        android:id="@+id/colorSpinner4"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/color_blob"
+                        android:gravity="center"
+                        android:layout_alignParentEnd="true"
+                        />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="22dp"
+                    android:layout_marginBottom="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/tolerancia" />
+
+                    <Spinner
+                        android:id="@+id/colorSpinner5"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/color_blob" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="365dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="25dp">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/unidad_de_medida"
+                        />
+
+                    <Spinner
+                        android:id="@+id/spMesures"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnTouch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/voy_a_tener_suerte"
+                    android:textColor="@color/white"
+
+                    />
+
+                <View
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="?attr/colorPrimary"
+                    />
+
+                <TextView
+                    android:id="@+id/changeLan"
+                    android:layout_marginTop="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cambiar_idioma"
+                    android:fontFamily="@font/poppins"
+                    android:layout_gravity="center"/>
+
+                <RadioGroup
+                    android:id="@+id/rg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        >
+                        <RadioButton
+                            android:id="@+id/rb1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/es_text"
+                            android:buttonTint="?attr/colorPrimary"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/rb2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/en_text"
+                            android:fontFamily="@font/poppins"
+                            android:buttonTint="?attr/colorPrimary"
+                            />
+                    </LinearLayout>
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_settings"
         android:layout_width="wrap_content"
@@ -213,12 +295,14 @@
         android:src="@drawable/ic_settings"
         app:tint="@android:color/white"
         app:backgroundTint="?attr/colorPrimary"
-        android:layout_margin="20dp"
         android:layout_gravity="end|bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="20dp"
         />
 
-</LinearLayout>
 
-</ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 

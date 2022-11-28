@@ -33,6 +33,30 @@ class Prefs(context: Context) {
         return storage.getString("cant_bands", "")!!
     }
 
+    fun getTheme():String{
+        return storage.getString("theme", "")!!
+    }
+
+    fun saveTheme(name:String){
+        storage.edit().putString("theme", name).apply()
+    }
+
+    fun getLanguage():String{
+        return storage.getString("language", "")!!
+    }
+
+    fun saveLaguage(name:String){
+        storage.edit().putString("language", name).apply()
+    }
+
+    fun getMeasure():String{
+        return storage.getString("measure", "")!!
+    }
+
+    fun saveMeasure(name:String){
+        storage.edit().putString("measure", name).apply()
+    }
+
     fun wipe(){
         storage.edit().clear().apply()
     }
